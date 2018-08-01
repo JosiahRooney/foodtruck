@@ -224,7 +224,6 @@ class FoodTruckSchedule {
 }
 
 const foodTruckSchedule = new FoodTruckSchedule();
-console.log(foodTruckSchedule.getTruck(['Wed','Aug','1','2018']))
 
 app.get('/', (req, res) => {
   res.json({
@@ -241,11 +240,23 @@ app.get('/truck/:date', (req, res) => {
   if (day.split('')[0] === '0') {
     day = day.split('')[1];
   }
-  let date = getDate(`${month} ${day} ${year}`); // [ 'Wed', 'Aug', '01', '2018' ]
+  let date = getDate(`${month} ${day} ${year}`);
   let truck = foodTruckSchedule.getTruck(date);
-  console.log(truck)
 
   res.json({
+    status: 'success',
+    date,
+    truck: truck
+  });
+});
+
+app.get('/today', (req, res) => {
+  let d = new Date();
+  let date = getDate(`${d.getMonth() + 1} ${d.getDate()} ${d.getFullYear()}`);
+  let truck = foodTruckSchedule.getTruck(date);
+
+  res.json({
+    status: 'success',
     date,
     truck: truck
   });
