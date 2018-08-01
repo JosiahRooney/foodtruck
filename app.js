@@ -1,3 +1,7 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+
 function getDate(string) {
   let d = new Date(string);
   return String(d).split(' ').slice(0, 4);
@@ -201,22 +205,50 @@ class FoodTruckSchedule {
   }
 
   getTruck(input) {
-    let dateArr = getDate(input);
-    let inputMonth = dateArr[1];
+    let inputMonth = input[1]; // Aug
 
     if (this.schedule[inputMonth] === undefined) {
       return false;
     }
 
+    let truck = null;
+
     this.schedule[inputMonth].forEach((day) => {
-      if (day.date.join(' ') === dateArr.join(' ')) {
-        console.log(day.truck.name);
-        console.log(day.truck.img.fileName);
-        console.log(day.truck.website)
+      if (day.date.join(' ') == input.join(' ')) {
+        truck = day.truck;
       }
     });
+
+    return truck;
   }
 }
 
 const foodTruckSchedule = new FoodTruckSchedule();
-foodTruckSchedule.getTruck('Wed Aug 1 2018');
+console.log(foodTruckSchedule.getTruck(['Wed','Aug','1','2018']))
+
+app.get('/', (req, res) => {
+  res.json({
+    status: 'success'
+  });
+});
+
+// Must be YYYYMMDD
+app.get('/truck/:date', (req, res) => {
+  let dateInput = req.params.date;
+  let year = dateInput.substring(0, 4);
+  let month = dateInput.substring(4, 6);
+  let day = dateInput.substring(6);
+  if (day.split('')[0] === '0') {
+    day = day.split('')[1];
+  }
+  let date = getDate(`${month} ${day} ${year}`); // [ 'Wed', 'Aug', '01', '2018' ]
+  let truck = foodTruckSchedule.getTruck(date);
+  console.log(truck)
+
+  res.json({
+    date,
+    truck: truck
+  });
+});
+
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
