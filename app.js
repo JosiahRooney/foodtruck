@@ -1,5 +1,10 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const app = express();
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 const port = process.env.PORT || 3000;
 
 function getDate(string) {
@@ -15,7 +20,8 @@ class FoodTruckSchedule {
         img: {
           fileName: 'https://i.imgur.com/hxyv20F.jpg'
         },
-        website: 'https://www.kennysheartandsoul.com/'
+        website: 'https://www.kennysheartandsoul.com/',
+        menu: '$10 - 5 Fried Chicken Wingettes\n$10 - BBQ Pork Mac N Cheese\n$12 - Fried Chicken Sandwich\n$12 - BBQ Pulled Pork Sandwich\n$12 - BBQ Fried Tofu Sandwich\n$14 - BBQ Pulled Pork Mac n Cheese Sandwich\n$4 - Collard Greens with Smoked Turkey, Black Eyed Peas with Smoked Turkey, Spicey BBQ Baked Beans\n$2 - Cornbread\n$2 - Coke, Diet Coke, Sprite, Water, Red Kool Aid & Grape Kool Aid'
       },
       sushi: {
         name: 'We Sushi',
@@ -250,38 +256,39 @@ app.get('/truck/:date', (req, res) => {
   });
 });
 
-app.get('/today', (req, res) => {
-  let d = new Date();
-  let date = getDate(`${d.getMonth() + 1} ${d.getDate()} ${d.getFullYear()}`);
-  let truck = foodTruckSchedule.getTruck(date);
-
-  res.json({
-    text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`
-  });
-});
-
 app.post('/today', (req, res) => {
   let d = new Date();
   let date = getDate(`${d.getMonth() + 1} ${d.getDate()} ${d.getFullYear()}`);
   let truck = foodTruckSchedule.getTruck(date);
+  let responseObj = {
+    response_type: 'in_channel',
+    text: 'There is no food truck today :slightly_frowning_face'
+  }
+  let body = req.body;
 
   if (truck) {
-    res.status(200).json({
-      response_type: 'in_channel',
-      text: `The food truck today is *${truck.name}*. See their menu at ${truck.website}`,
-      attachments: [
-        {
-          title: truck.name,
-          image_url: truck.img.fileName
-        }
-      ]
-    });
-  } else {
-    res.status(200).json({
-      response_type: 'in_channel',
-      text: `There is no food truck today :slightly_frowning_face:`
-    });
+    responseObj.text = `The food truck today is *${truck.name}*. See their menu at ${truck.website}`;
+    responseObj.attachments = [
+      {
+        title: truck.name,
+        image_url: truck.img.fileName
+      }
+    ]
+
+    if (body && body.text) {
+      // Add commands here
+
+      // Menu
+      if (body.text === 'menu' && truck.menu) {
+        responseObj.text = `${truck.name}'s menu (_may not be up-to-date_):`;
+        responseObj.attachments = [{
+          title: 'Menu',
+          text: truck.menu
+        }];
+      }
+    }
   }
+  res.status(200).json(responseObj);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
