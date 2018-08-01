@@ -256,9 +256,7 @@ app.get('/today', (req, res) => {
   let truck = foodTruckSchedule.getTruck(date);
 
   res.json({
-    status: 'success',
-    date,
-    truck: truck
+    text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`
   });
 });
 
