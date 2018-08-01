@@ -13,35 +13,35 @@ class FoodTruckSchedule {
       kenny: {
         name: 'Kenny\'s Heart & Soul',
         img: {
-          fileName: 'kenny.jpg'
+          fileName: 'https://i.imgur.com/hxyv20F.jpg'
         },
         website: 'https://www.kennysheartandsoul.com/'
       },
       sushi: {
         name: 'We Sushi',
         img: {
-          fileName: 'sushi.jpg'
+          fileName: 'https://i.imgur.com/H6Tenem.jpg'
         },
         website: 'http://www.wesushi.net/'
       },
       cassave: {
         name: 'Cassave',
         img: {
-          fileName: 'cassave.jpg'
+          fileName: 'https://i.imgur.com/6PHCZkq.jpg'
         },
         website: 'http://www.cassaverestaurant.com/'
       },
       chairman: {
         name: 'The Chairman',
         img: {
-          fileName: 'chairman.jpg'
+          fileName: 'https://i.imgur.com/LwVIbsL.jpg'
         },
         website: 'http://www.hailthechairman.com/'
       },
       bombzies: {
         name: 'Bombzies',
         img: {
-          fileName: 'bombzies.jpg'
+          fileName: 'https://i.imgur.com/QgVCDUu.jpg'
         },
         website: 'http://www.bombziesbbq.com/'
       },
@@ -55,21 +55,21 @@ class FoodTruckSchedule {
       soco: {
         name: 'Southern Comfort Kitchen',
         img: {
-          fileName: 'soco.jpg'
+          fileName: 'https://i.imgur.com/Sri9MVn.jpg'
         },
         website: 'http://southerncomfortkitchen.net/'
       },
       waffle: {
         name: 'The Waffle Roost',
         img: {
-          fileName: 'waffle.jpg'
+          fileName: 'https://i.imgur.com/oDWIv9w.jpg'
         },
         website: 'http://thewaffleroost.com/'
       },
       momo: {
         name: 'Momolicious',
         img: {
-          fileName: 'momo.jpg'
+          fileName: 'https://i.imgur.com/9ZSUaqo.jpg'
         },
         website: 'http://www.momolicioussf.com/'
       }
@@ -267,7 +267,12 @@ app.post('/today', (req, res) => {
 
   res.status(200).json({
     response_type: 'in_channel',
-    text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`
+    text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`,
+    attachments: [
+      {
+        image_url: truck.img.fileName
+      }
+    ]
   });
 });
 
