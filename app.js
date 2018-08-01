@@ -270,6 +270,7 @@ app.post('/today', (req, res) => {
     text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`,
     attachments: [
       {
+        title: truck.name,
         image_url: truck.img.fileName
       }
     ]
