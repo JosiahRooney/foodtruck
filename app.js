@@ -266,6 +266,7 @@ app.post('/today', (req, res) => {
   let truck = foodTruckSchedule.getTruck(date);
 
   res.status(200).json({
+    response_type: 'in_channel',
     text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`
   });
 });
