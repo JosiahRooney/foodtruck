@@ -267,7 +267,7 @@ app.post('/today', (req, res) => {
 
   res.status(200).json({
     response_type: 'in_channel',
-    text: `The food truck today is *${truck.name}*. See their menu at ${truck.website}`,
+    text: `The food truck today is *${truck.name}*.\nSee their menu at ${truck.website}`,
     attachments: [
       {
         title: truck.name,
