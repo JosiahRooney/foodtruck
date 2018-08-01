@@ -265,7 +265,7 @@ app.post('/today', (req, res) => {
   let date = getDate(`${d.getMonth() + 1} ${d.getDate()} ${d.getFullYear()}`);
   let truck = foodTruckSchedule.getTruck(date);
 
-  res.json({
+  res.status(200).json({
     text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`
   });
 });
