@@ -260,4 +260,14 @@ app.get('/today', (req, res) => {
   });
 });
 
+app.post('/today', (req, res) => {
+  let d = new Date();
+  let date = getDate(`${d.getMonth() + 1} ${d.getDate()} ${d.getFullYear()}`);
+  let truck = foodTruckSchedule.getTruck(date);
+
+  res.json({
+    text: `The food truck today is ${truck.name}. See their menu at ${truck.website}`
+  });
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
