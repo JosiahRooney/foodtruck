@@ -280,7 +280,7 @@ app.post('/today', (req, res) => {
 
       // Menu
       if (body.text === 'menu' && truck.menu) {
-        responseObj.text = `${truck.name}'s menu (_may not be up-to-date_):`;
+        responseObj.text = `*${truck.name}'s* menu (_may not be up-to-date_):`;
         responseObj.attachments = [{
           title: 'Menu',
           text: truck.menu
