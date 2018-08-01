@@ -265,16 +265,23 @@ app.post('/today', (req, res) => {
   let date = getDate(`${d.getMonth() + 1} ${d.getDate()} ${d.getFullYear()}`);
   let truck = foodTruckSchedule.getTruck(date);
 
-  res.status(200).json({
-    response_type: 'in_channel',
-    text: `The food truck today is *${truck.name}*. See their menu at ${truck.website}`,
-    attachments: [
-      {
-        title: truck.name,
-        image_url: truck.img.fileName
-      }
-    ]
-  });
+  if (truck) {
+    res.status(200).json({
+      response_type: 'in_channel',
+      text: `The food truck today is *${truck.name}*. See their menu at ${truck.website}`,
+      attachments: [
+        {
+          title: truck.name,
+          image_url: truck.img.fileName
+        }
+      ]
+    });
+  } else {
+    res.status(200).json({
+      response_type: 'in_channel',
+      text: `There is no food truck today :slightly_frowning_face:`
+    });
+  }
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
