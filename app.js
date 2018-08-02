@@ -321,13 +321,17 @@ app.post('/today', (req, res) => {
 
       // Menu
       if (body.text === 'menu' && truck.menu) {
-        const menu = truck.menu.map((el) => {
-          return el.price + ' ' + el.name;
-        });
-        responseObj.text = `*${truck.name}'s* menu (_subject to change_):`;
-        responseObj.attachments = [{
-          text: menu.join('\n')
-        }];
+        if (truck.menu) {
+          const menu = truck.menu.map((el) => {
+            return el.price + ' ' + el.name;
+          });
+          responseObj.text = `*${truck.name}'s* menu (_subject to change_):`;
+          responseObj.attachments = [{
+            text: menu.join('\n')
+          }];
+        } else {
+          responseObj.text = `*${truck.name}'s* menu isn't yet available!`
+        }
       }
     }
   }
