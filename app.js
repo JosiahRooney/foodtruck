@@ -310,7 +310,6 @@ app.post('/today', (req, res) => {
         });
         responseObj.text = `*${truck.name}'s* menu (_subject to change_):`;
         responseObj.attachments = [{
-          title: 'Menu',
           text: menu.join('\n')
         }];
       }
