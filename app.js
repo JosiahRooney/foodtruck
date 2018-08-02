@@ -49,7 +49,23 @@ class FoodTruckSchedule {
           fileName: 'https://i.imgur.com/H6Tenem.jpg'
         },
         website: 'http://www.wesushi.net/',
-        menu: 'Classic Sushi Burrito\nVegan Burrito\nSumo Burrito\nAhi Poke Burrito\nMonster Burrito\nChicken Teriyaki Bento\nShrimp Tempura Donburi\nUnagi Donburi\nPoke Bowl\nLobster Crunch Roll\nWheel of Fire Roll\nSekiwake Roll\nCrispy California Roll\nRainbow Roll\nVegan Roll'
+        menu: [
+          { price: '', name: 'Classic Sushi Burrito' },
+          { price: '', name: 'Vegan Burrito' },
+          { price: '', name: 'Sumo Burrito' },
+          { price: '', name: 'Ahi Poke Burrito' },
+          { price: '', name: 'Monster Burrito' },
+          { price: '', name: 'Chicken Teriyaki Bento' },
+          { price: '', name: 'Shrimp Tempura Donburi' },
+          { price: '', name: 'Unagi Donburi' },
+          { price: '', name: 'Poke Bowl' },
+          { price: '', name: 'Lobster Crunch Roll' },
+          { price: '', name: 'Wheel of Fire Roll' },
+          { price: '', name: 'Sekiwake Roll' },
+          { price: '', name: 'Crispy California Roll' },
+          { price: '', name: 'Rainbow Roll' },
+          { price: '', name: 'Vegan Roll' }
+        ]
       },
       cassave: {
         name: 'Cassave',
