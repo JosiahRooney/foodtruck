@@ -21,7 +21,27 @@ class FoodTruckSchedule {
           fileName: 'https://i.imgur.com/hxyv20F.jpg'
         },
         website: 'https://www.kennysheartandsoul.com/',
-        menu: '$10 - 5 Fried Chicken Wingettes\n$10 - BBQ Pork Mac N Cheese\n$12 - Fried Chicken Sandwich\n$12 - BBQ Pulled Pork Sandwich\n$12 - BBQ Fried Tofu Sandwich\n$14 - BBQ Pulled Pork Mac n Cheese Sandwich\n$4 - Collard Greens with Smoked Turkey, Black Eyed Peas with Smoked Turkey, Spicey BBQ Baked Beans\n$2 - Cornbread\n$2 - Coke, Diet Coke, Sprite, Water, Red Kool Aid & Grape Kool Aid'
+        menu: [
+          { price: '', name: '*Entrees*' },
+          { price: '$10', name: '5 Fried Chicken Wingettes' },
+          { price: '$10', name: 'BBQ Pork Mac N Cheese' },
+          { price: '$12', name: 'Fried Chicken Sandwich' },
+          { price: '$12', name: 'BBQ Pulled Pork Sandwich' },
+          { price: '$12', name: 'BBQ Fried Tofu Sandwich' },
+          { price: '$14', name: 'BBQ Pulled Pork Mac n Cheese Sandwich' },
+          { price: '', name: '*Sides*'},
+          { price: '$4', name: 'Collard Greens with Smoked Turkey' },
+          { price: '$4', name: 'Spicey BBQ Baked Beans' },
+          { price: '$4', name: 'Black Eyed Peas with Smoked Turkey' },
+          { price: '$2', name: 'Cornbread' },
+          { price: '', name: '*Drinks*' },
+          { price: '$2', name: 'Coke' },
+          { price: '$2', name: 'Diet Coke' },
+          { price: '$2', name: 'Sprite' },
+          { price: '$2', name: 'Water' },
+          { price: '$2', name: 'Red Kool Aid' },
+          { price: '$2', name: 'Grape Kool Aid' }
+        ]
       },
       sushi: {
         name: 'We Sushi',
@@ -281,10 +301,13 @@ app.post('/today', (req, res) => {
 
       // Menu
       if (body.text === 'menu' && truck.menu) {
+        const menu = truck.menu.map((el) => {
+          return el.price + ' ' + el.name;
+        });
         responseObj.text = `*${truck.name}'s* menu (_may not be up-to-date_):`;
         responseObj.attachments = [{
           title: 'Menu',
-          text: truck.menu
+          text: menu.join('\n')
         }];
       }
     }
