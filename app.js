@@ -7,6 +7,6 @@ app.use(bodyParser.urlencoded({
 }));
 const port = process.env.PORT || 3000;
 
-require('./src/routes')(app);
+require('./controllers/routes')(app);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

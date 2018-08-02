@@ -1,4 +1,4 @@
-const getDate = require('./getDate');
+const getDate = require('../helpers/getDate');
 
 module.exports = class FoodTruckSchedule {
   constructor() {

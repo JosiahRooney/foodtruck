@@ -1,6 +1,6 @@
 module.exports = (app) => {
-  const FoodTruckSchedule = require('./FoodTruckSchedule');
-  const getDate = require('./getDate');
+  const FoodTruckSchedule = require('../models/FoodTruckSchedule');
+  const getDate = require('../helpers/getDate');
   const foodTruckSchedule = new FoodTruckSchedule();
 
   app.get('/', (req, res) => {
