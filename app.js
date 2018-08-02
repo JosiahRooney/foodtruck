@@ -278,12 +278,16 @@ app.get('/truck/:date', (req, res) => {
 });
 
 app.post('/today', (req, res) => {
-  let d = new Date();
-  let date = getDate(`${d.getMonth() + 1} ${d.getDate()} ${d.getFullYear()}`);
+  const d = new Date();
+  let utcDate = new Date(d.toUTCString());
+  utcDate.setHours(utcDate.getHours() - 8);
+  const usDate = new Date(utcDate);
+  let date = getDate(`${usDate.getMonth() + 1} ${usDate.getDate()} ${usDate.getFullYear()}`);
   let truck = foodTruckSchedule.getTruck(date);
   let responseObj = {
     response_type: 'in_channel',
-    text: 'There is no food truck today :slightly_frowning_face'
+    text: 'There is no food truck today :slightly_frowning_face',
+    date: usDate
   }
   let body = req.body;
 
@@ -304,7 +308,7 @@ app.post('/today', (req, res) => {
         const menu = truck.menu.map((el) => {
           return el.price + ' ' + el.name;
         });
-        responseObj.text = `*${truck.name}'s* menu (_may not be up-to-date_):`;
+        responseObj.text = `*${truck.name}'s* menu (_subject to change_):`;
         responseObj.attachments = [{
           title: 'Menu',
           text: menu.join('\n')
