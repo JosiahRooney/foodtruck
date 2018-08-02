@@ -1,8 +1,8 @@
-module.exports = (app) => {
-  const FoodTruckSchedule = require('../models/FoodTruckSchedule');
-  const getDate = require('../helpers/getDate');
-  const foodTruckSchedule = new FoodTruckSchedule();
+const FoodTruckSchedule = require('../models/FoodTruckSchedule');
+const getDate = require('../helpers/getDate');
+const foodTruckSchedule = new FoodTruckSchedule();
 
+module.exports = (app) => {
   app.get('/', (req, res) => {
     res.json({
       status: 'success'
