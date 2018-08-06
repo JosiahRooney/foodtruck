@@ -67,7 +67,24 @@ module.exports = class FoodTruckSchedule {
         img: {
           fileName: 'https://i.imgur.com/LwVIbsL.jpg'
         },
-        website: 'http://www.hailthechairman.com/'
+        website: 'http://www.hailthechairman.com/',
+        menu: [
+          { price: '', name: '*Entrees*' },
+          { price: '$4.25', name: 'Pork Belly steamed bun' },
+          { price: '$7.50', name: 'Pork Belly Baked bun' },
+          { price: '$4.25', name: 'Braised Pork steamed bun' },
+          { price: '$7.50', name: 'Braised Pork Baked bun' },
+          { price: '$3.75', name: 'Spicy Chicken steamed bun' },
+          { price: '$6.75', name: 'Spicy Chicken Baked bun' },
+          { price: '$3.75', name: 'Crispy Tofu steamed bun (vegetarian)' },
+          { price: '$6.75', name: 'Crispy Tofu Baked bun (vegetarian)' },
+          { price: '', name: '*Sides*' },
+          { price: '$2.75', name: 'Bao Chips' },
+          { price: '', name: '*Drinks*' },
+          { price: '$2.50', name: 'Coconut Juice' },
+          { price: '$2', name: 'Bottled Water' },
+          { price: '$2', name: 'Soda' }
+        ]
       },
       bombzies: {
         name: 'Bombzies',
