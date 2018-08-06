@@ -66,6 +66,7 @@ module.exports = (app) => {
             }];
           } else {
             responseObj.text = `*${truck.name}'s* menu isn't yet available!`
+            responseObj.attachments = [];
           }
         }
       }
