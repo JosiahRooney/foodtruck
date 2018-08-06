@@ -55,7 +55,7 @@ module.exports = (app) => {
         // Add commands here
 
         // Menu
-        if (body.text === 'menu' && truck.menu) {
+        if (body.text === 'menu') {
           if (truck.menu) {
             const menu = truck.menu.map((el) => {
               return el.price + ' ' + el.name;
