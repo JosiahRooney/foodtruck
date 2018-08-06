@@ -65,7 +65,7 @@ module.exports = (app) => {
               text: menu.join('\n')
             }];
           } else {
-            responseObj.text = `*${truck.name}'s* menu isn't yet available!`
+            responseObj.text = `*${truck.name}'s* menu isn't yet available! :sadpanda:`
             responseObj.attachments = [];
           }
         }
