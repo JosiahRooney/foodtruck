@@ -50,6 +50,10 @@ module.exports = (app) => {
         if (body.text.includes('menu')) {
           let command = body.text;
           let subCommand = command.split(' ')[1];
+          console.log({
+            command,
+            subCommand
+          });
 
           let trucks = [
             'kenny',
