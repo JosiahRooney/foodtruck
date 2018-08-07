@@ -120,7 +120,26 @@ module.exports = class FoodTruckSchedule {
         img: {
           fileName: 'india.jpg'
         },
-        website: 'http://munchindia.com/'
+        website: 'http://munchindia.com/',
+        menu: [
+          { price: '', name: '*Vegetarian Entrees*' },
+          { price: '$7', name: 'Chana Masala' },
+          { price: '$7', name: 'Aloo Gobi' },
+          { price: '$7', name: 'Imli Biagan' },
+          { price: '', name: '*Non-veggie Entrees*' },
+          { price: '$9', name: 'Chicken Masala' },
+          { price: '$10', name: 'Chicken Kebab' },
+          { price: '', name: '*Combo*' },
+          { price: '$10', name: 'Veg Combo' },
+          { price: '$12', name: 'Non-veg Combo' },
+          { price: '', name: '*Chef\'s Special' },
+          { price: '$10', name: 'Lamb Kofta' },
+          { price: '$11', name: 'Goan Shrimp Curry' },
+          { price: '', name: '*Drinks*' },
+          { price: '', name: 'Sprite' },
+          { price: '', name: 'Coke' },
+          { price: '', name: 'Water' }
+        ]
       },
       soco: {
         name: 'Southern Comfort Kitchen',
@@ -308,13 +327,6 @@ module.exports = class FoodTruckSchedule {
 
   getTrucksOfWeek() {
     let daysOfWeek = this.getWeek();
-    // ['2018-08-06',
-    //   '2018-08-07',
-    //   '2018-08-08',
-    //   '2018-08-09',
-    //   '2018-08-10',
-    //   '2018-08-11',
-    //   '2018-08-12']
     let month = moment().format('MMM');
     let trucks = [];
 
