@@ -50,10 +50,6 @@ module.exports = (app) => {
         if (body.text.includes('menu')) {
           let command = body.text;
           let subCommand = command.split(' ')[1];
-          console.log({
-            command,
-            subCommand
-          });
 
           let trucks = [
             'kenny',
@@ -68,15 +64,7 @@ module.exports = (app) => {
           ]
 
           if (trucks.indexOf(subCommand) !== -1) {
-            let truck = foodTruckSchedule.trucks[subCommand];
-            const menu = truck.menu.map((el) => {
-              return el.price + ' ' + el.name;
-            });
-            responseObj.text = `*${truck.name}'s* menu (_subject to change_):`
-            responseObj.attachments = [{
-              text: menu.join('\n')
-            }];
-            return true;
+            truck = foodTruckSchedule.trucks[subCommand];
           }
 
           if (truck.menu) {
