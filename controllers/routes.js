@@ -1,6 +1,7 @@
+const moment = require('moment-timezone');
 const FoodTruckSchedule = require('../models/FoodTruckSchedule');
-const getDate = require('../helpers/getDate');
 const foodTruckSchedule = new FoodTruckSchedule();
+moment.tz.setDefault('America/Los_Angeles');
 
 module.exports = (app) => {
   app.get('/', (req, res) => {
@@ -12,13 +13,7 @@ module.exports = (app) => {
   // Must be YYYYMMDD
   app.get('/truck/:date', (req, res) => {
     let dateInput = req.params.date;
-    let year = dateInput.substring(0, 4);
-    let month = dateInput.substring(4, 6);
-    let day = dateInput.substring(6);
-    if (day.split('')[0] === '0') {
-      day = day.split('')[1];
-    }
-    let date = getDate(`${month} ${day} ${year}`);
+    let date = moment(dateInput);
     let truck = foodTruckSchedule.getTruck(date);
 
     res.json({
@@ -29,16 +24,13 @@ module.exports = (app) => {
   });
 
   app.post('/today', (req, res) => {
-    const d = new Date();
-    let utcDate = new Date(d.toUTCString());
-    utcDate.setHours(utcDate.getHours() - 8);
-    const usDate = new Date(utcDate);
-    let date = getDate(`${usDate.getMonth() + 1} ${usDate.getDate()} ${usDate.getFullYear()}`);
+    const date = moment();
     let truck = foodTruckSchedule.getTruck(date);
+
     let responseObj = {
       response_type: 'in_channel',
       text: 'There is no food truck today :slightly_frowning_face',
-      date: usDate
+      date
     }
     let body = req.body;
 
@@ -68,6 +60,22 @@ module.exports = (app) => {
             responseObj.text = `*${truck.name}'s* menu isn't yet available! :sadpanda:`
             responseObj.attachments = [];
           }
+        }
+
+        if (body.text === 'week') {
+          let week = foodTruckSchedule.getTrucksOfWeek();
+          console.log('week:', week);
+          responseObj.text = 'The trucks of the week:';
+          responseObj.attachments = [];
+          
+          week.forEach((day) => {
+            if (day.truck !== null) {
+              responseObj.attachments.push({
+                title: `${moment(day.date).format('dddd, MMMM Do')}`,
+                text: `*${day.truck.name}*`
+              })
+            }
+          });
         }
       }
     }

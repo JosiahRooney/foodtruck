@@ -1,4 +1,5 @@
 const getDate = require('../helpers/getDate');
+const moment = require('moment');
 
 module.exports = class FoodTruckSchedule {
   constructor() {
@@ -146,127 +147,127 @@ module.exports = class FoodTruckSchedule {
     this.schedule = {
       Aug: [
         {
-          date: getDate('August 1 2018'),
+          date: moment('2018-08-01').format('YYYY-MM-DD'),
           truck: this.trucks.kenny
         },
         {
-          date: getDate('August 2 2018'),
+          date: moment('2018-08-02').format('YYYY-MM-DD'),
           truck: this.trucks.sushi
         },
         {
-          date: getDate('August 3 2018'),
+          date: moment('2018-08-03').format('YYYY-MM-DD'),
           truck: this.trucks.cassave
         },
         {
-          date: getDate('August 4 2018'),
+          date: moment('2018-08-04').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 5 2018'),
+          date: moment('2018-08-05').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 6 2018'),
+          date: moment('2018-08-06').format('YYYY-MM-DD'),
           truck: this.trucks.chairman
         },
         {
-          date: getDate('August 7 2018'),
+          date: moment('2018-08-07').format('YYYY-MM-DD'),
           truck: this.trucks.bombzies
         },
         {
-          date: getDate('August 8 2018'),
+          date: moment('2018-08-08').format('YYYY-MM-DD'),
           truck: this.trucks.india
         },
         {
-          date: getDate('August 9 2018'),
+          date: moment('2018-08-09').format('YYYY-MM-DD'),
           truck: this.trucks.soco
         },
         {
-          date: getDate('August 10 2018'),
+          date: moment('2018-08-10').format('YYYY-MM-DD'),
           truck: this.trucks.cassave
         },
         {
-          date: getDate('August 11 2018'),
+          date: moment('2018-08-11').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 12 2018'),
+          date: moment('2018-08-12').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 13 2018'),
+          date: moment('2018-08-13').format('YYYY-MM-DD'),
           truck: this.trucks.waffle
         },
         {
-          date: getDate('August 14 2018'),
+          date: moment('2018-08-14').format('YYYY-MM-DD'),
           truck: this.trucks.momo
         },
         {
-          date: getDate('August 15 2018'),
+          date: moment('2018-08-15').format('YYYY-MM-DD'),
           truck: this.trucks.kenny
         },
         {
-          date: getDate('August 16 2018'),
+          date: moment('2018-08-16').format('YYYY-MM-DD'),
           truck: this.trucks.sushi
         },
         {
-          date: getDate('August 17 2018'),
+          date: moment('2018-08-17').format('YYYY-MM-DD'),
           truck: this.trucks.cassave
         },
         {
-          date: getDate('August 18 2018'),
+          date: moment('2018-08-18').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 19 2018'),
+          date: moment('2018-08-19').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 20 2018'),
+          date: moment('2018-08-20').format('YYYY-MM-DD'),
           truck: this.trucks.chairman
         },
         {
-          date: getDate('August 21 2018'),
+          date: moment('2018-08-21').format('YYYY-MM-DD'),
           truck: this.trucks.bombzies
         },
         {
-          date: getDate('August 22 2018'),
+          date: moment('2018-08-22').format('YYYY-MM-DD'),
           truck: this.trucks.india
         },
         {
-          date: getDate('August 23 2018'),
+          date: moment('2018-08-23').format('YYYY-MM-DD'),
           truck: this.trucks.soco
         },
         {
-          date: getDate('August 24 2018'),
+          date: moment('2018-08-24').format('YYYY-MM-DD'),
           truck: this.trucks.cassave
         },
         {
-          date: getDate('August 25 2018'),
+          date: moment('2018-08-25').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 26 2018'),
+          date: moment('2018-08-26').format('YYYY-MM-DD'),
           truck: null
         },
         {
-          date: getDate('August 27 2018'),
+          date: moment('2018-08-27').format('YYYY-MM-DD'),
           truck: this.trucks.waffle
         },
         {
-          date: getDate('August 28 2018'),
+          date: moment('2018-08-28').format('YYYY-MM-DD'),
           truck: this.trucks.momo
         },
         {
-          date: getDate('August 29 2018'),
+          date: moment('2018-08-29').format('YYYY-MM-DD'),
           truck: this.trucks.kenny
         },
         {
-          date: getDate('August 30 2018'),
+          date: moment('2018-08-30').format('YYYY-MM-DD'),
           truck: this.trucks.sushi
         },
         {
-          date: getDate('August 31 2018'),
+          date: moment('2018-08-31').format('YYYY-MM-DD'),
           truck: this.trucks.cassave
         }
       ]
@@ -274,20 +275,60 @@ module.exports = class FoodTruckSchedule {
   }
 
   getTruck(input) {
-    let inputMonth = input[1]; // Aug
+    input = input.format('YYYY-MM-DD')
+    let month = moment(input).format('MMM');
 
-    if (this.schedule[inputMonth] === undefined) {
+    if (this.schedule[month] === undefined) {
       return false;
     }
 
     let truck = null;
 
-    this.schedule[inputMonth].forEach((day) => {
-      if (day.date.join(' ') == input.join(' ')) {
+    this.schedule[month].forEach((day) => {
+      if (day.date == input) {
         truck = day.truck;
       }
     });
 
     return truck;
+  }
+
+  getWeek() {
+    const startOfWeek = moment().startOf('isoWeek');
+    const endOfWeek = moment().endOf('isoWeek');
+    let days = [];
+    let day = startOfWeek;
+
+    while (day <= endOfWeek) {
+      days.push(day.format('YYYY-MM-DD'));
+      day = day.clone().add(1, 'd');
+    }
+    return days;
+  }
+
+  getTrucksOfWeek() {
+    let daysOfWeek = this.getWeek();
+    // ['2018-08-06',
+    //   '2018-08-07',
+    //   '2018-08-08',
+    //   '2018-08-09',
+    //   '2018-08-10',
+    //   '2018-08-11',
+    //   '2018-08-12']
+    let month = moment().format('MMM');
+    let trucks = [];
+
+    if (this.schedule[month] === undefined) {
+      return false;
+    }
+
+    this.schedule[month].forEach((day) => {
+      daysOfWeek.forEach((dayOfWeek) => {
+        if (dayOfWeek === day.date && day.truck !== null) {
+          trucks.push(day);
+        }
+      });
+    });
+    return trucks;
   }
 }
