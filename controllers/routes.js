@@ -72,7 +72,7 @@ module.exports = (app) => {
             if (day.truck !== null) {
               responseObj.attachments.push({
                 title: `${moment(day.date).format('dddd, MMMM Do')}`,
-                text: `*${day.truck.name}*`
+                text: `Truck: *${day.truck.name}* - Website: ${day.truck.website}`
               })
             }
           });
