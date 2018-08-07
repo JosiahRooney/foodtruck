@@ -146,7 +146,23 @@ module.exports = class FoodTruckSchedule {
         img: {
           fileName: 'https://i.imgur.com/Sri9MVn.jpg'
         },
-        website: 'http://southerncomfortkitchen.net/'
+        website: 'http://southerncomfortkitchen.net/',
+        menu: [
+          { price: '', name: '*Entrees*' },
+          { price: '$10', name: 'Chicken \'n Sausage Jambalaya' },
+          { price: '$10', name: 'Seafood Gumbo' },
+          { price: '$10', name: 'Southern Fried Chicken sandwich' },
+          { price: '$10', name: 'Fried Shrimp Po\' Boy' },
+          { price: '$10', name: 'Fried Catfish Po\' Boy' },
+          { price: '$10', name: 'Crawfish Étouffée' },
+          { price: '$10', name: 'Garlic Battered Cajun Fried Shrimp Fries' },
+          { price: '', name: '*Sides*' },
+          { price: '$6', name: 'Cajun French Fries' },
+          { price: '', name: '*Drinks*' },
+          { price: '$2', name: 'Coke' },
+          { price: '$2', name: 'Diet Coke' },
+          { price: '$2', name: 'Water' },
+        ]
       },
       waffle: {
         name: 'The Waffle Roost',
