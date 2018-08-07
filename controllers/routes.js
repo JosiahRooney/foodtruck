@@ -64,7 +64,6 @@ module.exports = (app) => {
 
         if (body.text === 'week') {
           let week = foodTruckSchedule.getTrucksOfWeek();
-          console.log('week:', week);
           responseObj.text = 'The trucks of the week:';
           responseObj.attachments = [];
           
