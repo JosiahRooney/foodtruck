@@ -1,4 +1,3 @@
-const getDate = require('../helpers/getDate');
 const moment = require('moment');
 
 module.exports = class FoodTruckSchedule {
