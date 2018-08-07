@@ -91,7 +91,28 @@ module.exports = class FoodTruckSchedule {
         img: {
           fileName: 'https://i.imgur.com/QgVCDUu.jpg'
         },
-        website: 'http://www.bombziesbbq.com/'
+        website: 'http://www.bombziesbbq.com/',
+        menu: [
+          { price: '', name: '*Style*' },
+          { price: '$11', name: 'Rice Bowl' },
+          { price: '$10', name: 'Baguette' },
+          { price: '', name: '*Flavor*' },
+          { price: '', name: 'Korean BBQ Chicken' },
+          { price: '', name: 'Teriyaki Chicken' },
+          { price: '', name: 'Thai Coconut Chicken' },
+          { price: '', name: 'Lemongrass Chicken' },
+          { price: '', name: '*Toppings*' },
+          { price: '', name: 'Napa Cabbage Kimchi' },
+          { price: '', name: 'Tangy Daikon and Carrots' },
+          { price: '', name: '*Sides*' },
+          { price: '', name: 'Kimchi Queso Fries' },
+          { price: '', name: 'Vietnamese Egg Rolls' },
+          { price: '', name: 'Saigon Chicken Wings' },
+          { price: '', name: '*Drinks*' },
+          { price: '$3', name: 'Water' },
+          { price: '$3', name: 'Coke' },
+          { price: '$3', name: 'Diet Coke' },
+        ]
       },
       india: {
         name: 'Munch India',
