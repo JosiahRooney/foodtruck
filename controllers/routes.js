@@ -47,7 +47,34 @@ module.exports = (app) => {
         // Add commands here
 
         // Menu
-        if (body.text === 'menu') {
+        if (body.text.includes('menu')) {
+          let command = body.text;
+          let subCommand = command.split(' ')[1];
+
+          let trucks = [
+            'kenny',
+            'sushi',
+            'cassave',
+            'chairman',
+            'bombzies',
+            'india',
+            'soco',
+            'waffle',
+            'momo'
+          ]
+
+          if (trucks.indexOf(subCommand) !== -1) {
+            let truck = foodTruckSchedule.trucks[subCommand];
+            const menu = truck.menu.map((el) => {
+              return el.price + ' ' + el.name;
+            });
+            responseObj.text = `*${truck.name}'s* menu (_subject to change_):`
+            responseObj.attachments = [{
+              text: menu.join('\n')
+            }];
+            return true;
+          }
+
           if (truck.menu) {
             const menu = truck.menu.map((el) => {
               return el.price + ' ' + el.name;
@@ -62,7 +89,7 @@ module.exports = (app) => {
           }
         }
 
-        if (body.text === 'week') {
+        if (body.text.includes('week')) {
           let week = foodTruckSchedule.getTrucksOfWeek();
           responseObj.text = 'The trucks of the week:';
           responseObj.attachments = [];
