@@ -69,7 +69,7 @@ module.exports = (app) => {
 
           if (truck.menu) {
             const menu = truck.menu.map((el) => {
-              return el.price + ' ' + el.name;
+              return `${el.price} ${el.name}`;
             });
             responseObj.text = `*${truck.name}'s* menu (_subject to change_):`;
             responseObj.attachments = [{
