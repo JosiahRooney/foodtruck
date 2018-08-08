@@ -1,13 +1,12 @@
 const moment = require('moment-timezone');
+const path = require('path');
 const FoodTruckSchedule = require('../models/FoodTruckSchedule');
 const foodTruckSchedule = new FoodTruckSchedule();
 moment.tz.setDefault('America/Los_Angeles');
 
-module.exports = (app) => {
+module.exports = (app, dir) => {
   app.get('/', (req, res) => {
-    res.json({
-      status: 'success'
-    });
+    res.sendFile('/views/index.html', { root: dir });
   });
 
   // Must be YYYYMMDD
