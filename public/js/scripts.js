@@ -8,7 +8,7 @@ class FoodTruck {
       method: 'POST'
     });
     let json = await response.json();
-    htmlStr = `<div class="results">${json.text}</div>`;
+    let htmlStr = `<div class="results">${json.text}</div>`;
     document.querySelector('.main').innerHTML = htmlStr;
   }
 }
