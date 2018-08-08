@@ -131,7 +131,7 @@ module.exports = class FoodTruckSchedule {
           { price: '', name: '*Combo*' },
           { price: '$10', name: 'Veg Combo' },
           { price: '$12', name: 'Non-veg Combo' },
-          { price: '', name: '*Chef\'s Special' },
+          { price: '', name: '*Chef\'s Special*' },
           { price: '$10', name: 'Lamb Kofta' },
           { price: '$11', name: 'Goan Shrimp Curry' },
           { price: '', name: '*Drinks*' },
