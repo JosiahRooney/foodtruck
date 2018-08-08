@@ -18,7 +18,7 @@ module.exports = (app, dir) => {
     res.json({
       status: 'success',
       date,
-      truck: truck
+      truck
     });
   });
 
