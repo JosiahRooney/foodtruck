@@ -117,7 +117,7 @@ module.exports = class FoodTruckSchedule {
       india: {
         name: 'Munch India',
         img: {
-          fileName: 'india.jpg'
+          fileName: 'https://i.imgur.com/lANE8FO.jpg'
         },
         website: 'http://munchindia.com/',
         menu: [
