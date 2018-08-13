@@ -62,7 +62,7 @@ module.exports = class FoodTruckSchedule {
         },
         website: 'http://www.cassaverestaurant.com/',
         menu: [
-          { price: '', name: '_Choice of meat:_ Asada, Chicken, Carnitas, Pastor, Prawn, Salmon, Cod, Beef Tongue' },
+          { price: '', name: '_Choice of meat:_ Asada, Chicken, Carnitas, Pastor, Prawn, Salmon, Cod, Beef Tongue, Vegetarian (grilled veggies)' },
           { price: '', name: '*Tacos*' },
           { price: '$7.50', name: 'Tacos (3)' },
           { price: '$4.25', name: 'Prawn Taco (1)' },
