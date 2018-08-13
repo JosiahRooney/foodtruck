@@ -210,7 +210,29 @@ module.exports = class FoodTruckSchedule {
         img: {
           fileName: 'https://i.imgur.com/oDWIv9w.jpg'
         },
-        website: 'http://thewaffleroost.com/'
+        website: 'http://thewaffleroost.com/',
+        menu: [
+          { name: '*Entrees*', price: '' },
+          { name: '2 pc fried chicken, mac & cheese, collard greens', price: '$12' },
+          { name: '1 pc fried chicken, waffle, mac & cheese, collard greens. Double chicken +$2.50', price: '$12' },
+          { name: 'Chicken Bites', price: '$8' },
+          { name: 'Waffle Sandwich, fried chicken, egg, bacon, side sweet potato chips', price: '$10' },
+          { name: 'Waffle Sandwich, spicy fried chicken, cheddar, serrano peppers, side sweet potato chips', price: '$10' },
+          { name: 'Bite size chicken + waffles. Add bacon +$1', price: '$8' },
+          { name: 'Waffle sandwich with egg, cheese, serrano peppers, side chips', price: '$8' },
+          { name: 'Sweet waffle', price: '$5' },
+          { name: '*Sides*', price: '' },
+          { name: 'Mac & Cheese', price: '$4' },
+          { name: 'Collard Greens (w/ bacon)', price: '$3' },
+          { name: 'French Fries', price: '$3' },
+          { name: '*Drinks*', price: '' },
+          { name: 'Coke', price: '' },
+          { name: 'Diet Coke', price: '' },
+          { name: 'Sprite', price: '' },
+          { name: 'Lemonade', price: '' },
+          { name: 'Water', price: '' },
+          { name: 'Iced Tea', price: '' },
+        ]
       },
       momo: {
         name: 'Momolicious',
