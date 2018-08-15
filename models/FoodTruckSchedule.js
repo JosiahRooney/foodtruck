@@ -247,7 +247,7 @@ module.exports = class FoodTruckSchedule {
           { name: 'The Ultimate Jhol Momo', price: '$10.50' },
           { name: 'Kothay Momo', price: '$10.50' },
           { name: 'Fiery Momo', price: '$11.50' },
-          { name: 'Jr Momos (5)', price: '' },
+          { name: '*Jr Momos (5)*', price: '' },
           { name: '_Choose filling:_ Chicken, Vegetable', price: '' },
           { name: 'Jr. Kathmandu Momo', price: '$6' },
           { name: 'Jr. The Ultimate Jhol Momo', price: '$7' },
