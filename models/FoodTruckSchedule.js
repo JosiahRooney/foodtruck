@@ -239,7 +239,33 @@ module.exports = class FoodTruckSchedule {
         img: {
           fileName: 'https://i.imgur.com/9ZSUaqo.jpg'
         },
-        website: 'http://www.momolicioussf.com/'
+        website: 'http://www.momolicioussf.com/',
+        menu: [
+          { name: '*Momos (10)*', price: '' },
+          { name: '_Choose filling:_ Chicken, Vegetable', price: '' },
+          { name: 'Kathmandu Momo', price: '$9.50' },
+          { name: 'The Ultimate Jhol Momo', price: '$10.50' },
+          { name: 'Kothay Momo', price: '$10.50' },
+          { name: 'Fiery Momo', price: '$11.50' },
+          { name: 'Jr Momos (5)', price: '' },
+          { name: '_Choose filling:_ Chicken, Vegetable', price: '' },
+          { name: 'Jr. Kathmandu Momo', price: '$6' },
+          { name: 'Jr. The Ultimate Jhol Momo', price: '$7' },
+          { name: 'Jr. Kothay Momo', price: '$7' },
+          { name: 'Jr. Fiery Momo', price: '$7' },
+          { name: '*Entrees*', price: '' },
+          { name: 'Nepali Chicken Curry', price: '$11' },
+          { name: '+ Combo', price: '$14' },
+          { name: 'Nepali Chow Mein', price: '$11' },
+          { name: '+ Combo', price: '$14' },
+          { name: '*Drinks*', price: '' },
+          { name: 'Mango Lassi', price: '$4' },
+          { name: 'Snapple', price: '$4' },
+          { name: 'Sparkling Water', price: '$3' },
+          { name: 'Coconut Water', price: '$3' },
+          { name: 'Water', price: '$2' },
+          { name: 'Can Soda', price: '$2' },
+        ]
       }
     }
     this.schedule = {
