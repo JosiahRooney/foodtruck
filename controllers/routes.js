@@ -28,7 +28,7 @@ module.exports = (app, dir) => {
 
     let responseObj = {
       response_type: 'in_channel',
-      text: 'There is no food truck today :slightly_frowning_face',
+      text: 'There is no food truck today (or the schedule hasn\'t been published yet) :slightly_frowning_face:',
       date
     }
     let body = req.body;
