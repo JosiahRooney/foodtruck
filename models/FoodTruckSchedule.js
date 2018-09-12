@@ -266,7 +266,15 @@ module.exports = class FoodTruckSchedule {
           { name: 'Water', price: '$2' },
           { name: 'Can Soda', price: '$2' },
         ]
-      }
+      },
+      steel: {
+        name: 'Steel Smokin\' BBQ & Catering',
+        img: {
+          fileName: 'https://i.imgur.com/gfk8deq.png'
+        },
+        website: 'http://www.steelsmokinbbq.com/',
+        menu: null
+      },
     }
     this.schedule = {
       Aug: [
@@ -394,6 +402,128 @@ module.exports = class FoodTruckSchedule {
           date: moment('2018-08-31').format('YYYY-MM-DD'),
           truck: this.trucks.cassave
         }
+      ],
+      Sept: [
+        {
+          date: moment('2018-09-01').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-02').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-03').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-04').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2018-09-05').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-09-06').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-09-07').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-09-08').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-09').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-10').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-09-11').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-09-12').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-09-13').format('YYYY-MM-DD'),
+          truck: this.trucks.steel
+        },
+        {
+          date: moment('2018-09-14').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-09-15').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-16').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-17').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2018-09-18').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2018-09-19').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-09-20').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-09-21').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-09-22').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-23').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-24').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-09-25').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-09-26').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-09-27').format('YYYY-MM-DD'),
+          truck: this.trucks.steel
+        },
+        {
+          date: moment('2018-09-28').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-09-29').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-09-30').format('YYYY-MM-DD'),
+          truck: null
+        },
       ]
     }
   }

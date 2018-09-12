@@ -59,7 +59,8 @@ module.exports = (app, dir) => {
             'india',
             'soco',
             'waffle',
-            'momo'
+            'momo',
+            'steel'
           ]
 
           if (trucks.indexOf(subCommand) !== -1) {
