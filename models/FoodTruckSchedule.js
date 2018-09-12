@@ -403,7 +403,7 @@ module.exports = class FoodTruckSchedule {
           truck: this.trucks.cassave
         }
       ],
-      Sept: [
+      Sep: [
         {
           date: moment('2018-09-01').format('YYYY-MM-DD'),
           truck: null
