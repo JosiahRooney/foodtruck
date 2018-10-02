@@ -275,6 +275,27 @@ module.exports = class FoodTruckSchedule {
         website: 'http://www.steelsmokinbbq.com/',
         menu: null
       },
+      gyro: {
+        name: 'Golden Gate Gyro',
+        img: {
+          fileName: 'https://i.imgur.com/VsOp4rD.png'
+        },
+        website: 'https://www.goldengategyro.com/',
+        menu: [
+          { name: '*Gyros*', price: '' },
+          { name: 'Chicken Gyro', price: '' },
+          { name: 'Lamb Gyro', price: '' },
+          { name: 'Mixed Gyro (chicken and lamb)', price: '' },
+          { name: '*Rice Plates*', price: '' },
+          { name: 'Chicken Over Rice', price: '' },
+          { name: 'Lamb Over Rice', price: '' },
+          { name: 'Mixed Over Rice (chicken and lamb)', price: '' },
+          { name: '*Salads*', price: '' },
+          { name: 'Chicken Over Salad', price: '' },
+          { name: 'Lamb Over Salad', price: '' },
+          { name: 'Mixed Over Salad (chicken and lamb)', price: '' },
+        ]
+      },
     }
     this.schedule = {
       Aug: [
@@ -523,6 +544,254 @@ module.exports = class FoodTruckSchedule {
         {
           date: moment('2018-09-30').format('YYYY-MM-DD'),
           truck: null
+        },
+      ],
+      Oct: [
+        {
+          date: moment('2018-10-01').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2018-10-02').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2018-10-03').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-10-04').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-10-05').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-10-06').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-07').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-08').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-10-09').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-10-10').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-10-11').format('YYYY-MM-DD'),
+          truck: this.trucks.gyro
+        },
+        {
+          date: moment('2018-10-12').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-10-13').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-14').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-15').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2018-10-16').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2018-10-17').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-10-18').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-10-19').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-10-20').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-21').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-22').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-10-23').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-10-24').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-10-25').format('YYYY-MM-DD'),
+          truck: this.trucks.gyro
+        },
+        {
+          date: moment('2018-10-26').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-10-27').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-28').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-10-29').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2018-10-30').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2018-10-31').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+      ],
+      Nov: [
+        {
+          date: moment('2018-11-01').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-11-02').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-11-03').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-11-04').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-11-05').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-11-06').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-07').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-08').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-11-09').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-11-10').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-11-11').format('YYYY-MM-DD'),
+          truck: this.trucks.gyro
+        },
+        {
+          date: moment('2018-11-12').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-11-13').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-14').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-15').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2018-11-16').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2018-11-17').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-11-18').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-11-19').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-11-20').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-21').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-22').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-11-23').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-11-24').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-11-25').format('YYYY-MM-DD'),
+          truck: this.trucks.gyro
+        },
+        {
+          date: moment('2018-11-26').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-11-27').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-28').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-11-29').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2018-11-30').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
         },
       ]
     }
