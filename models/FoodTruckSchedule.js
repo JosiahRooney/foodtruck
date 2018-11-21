@@ -779,7 +779,7 @@ module.exports = class FoodTruckSchedule {
         },
         {
           date: moment('2018-11-27').format('YYYY-MM-DD'),
-          truck: thistrucks.bombzies
+          truck: this.trucks.bombzies
         },
         {
           date: moment('2018-11-28').format('YYYY-MM-DD'),
