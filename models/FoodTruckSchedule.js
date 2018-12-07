@@ -794,7 +794,133 @@ module.exports = class FoodTruckSchedule {
           truck: this.trucks.cassave
         },
       ],
-      // Dec: [
+      Dec: [
+        {
+          date: moment('2018-12-01').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-02').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-03').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-12-04').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-12-05').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-12-06').format('YYYY-MM-DD'),
+          truck: this.trucks.steel
+        },
+        {
+          date: moment('2018-12-07').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-12-08').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-09').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-10').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2018-12-11').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2018-12-12').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-12-13').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-12-14').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-12-15').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-16').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-17').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2018-12-18').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2018-12-19').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2018-12-20').format('YYYY-MM-DD'),
+          truck: this.trucks.steel
+        },
+        {
+          date: moment('2018-12-21').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-12-22').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-23').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-24').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-25').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-26').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2018-12-27').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2018-12-28').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2018-12-29').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-30').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2018-12-31').format('YYYY-MM-DD'),
+          truck: null
+        },
+      ],
+      // Jan: [
       //   {
       //     date: moment('2018-11-01').format('YYYY-MM-DD'),
       //     truck: this.trucks.soco
@@ -915,7 +1041,7 @@ module.exports = class FoodTruckSchedule {
       //     date: moment('2018-11-30').format('YYYY-MM-DD'),
       //     truck: this.trucks.bombzies
       //   },
-      // ]
+      // ],
     }
   }
 
