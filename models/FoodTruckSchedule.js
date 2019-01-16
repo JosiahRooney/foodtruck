@@ -920,128 +920,138 @@ module.exports = class FoodTruckSchedule {
           truck: null
         },
       ],
-      // Jan: [
-      //   {
-      //     date: moment('2018-11-01').format('YYYY-MM-DD'),
-      //     truck: this.trucks.soco
-      //   },
-      //   {
-      //     date: moment('2018-11-02').format('YYYY-MM-DD'),
-      //     truck: this.trucks.cassave
-      //   },
-      //   {
-      //     date: moment('2018-11-03').format('YYYY-MM-DD'),
-      //     truck: this.trucks.india
-      //   },
-      //   {
-      //     date: moment('2018-11-04').format('YYYY-MM-DD'),
-      //     truck: this.trucks.soco
-      //   },
-      //   {
-      //     date: moment('2018-11-05').format('YYYY-MM-DD'),
-      //     truck: this.trucks.cassave
-      //   },
-      //   {
-      //     date: moment('2018-11-06').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-07').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-08').format('YYYY-MM-DD'),
-      //     truck: this.trucks.waffle
-      //   },
-      //   {
-      //     date: moment('2018-11-09').format('YYYY-MM-DD'),
-      //     truck: this.trucks.momo
-      //   },
-      //   {
-      //     date: moment('2018-11-10').format('YYYY-MM-DD'),
-      //     truck: this.trucks.kenny
-      //   },
-      //   {
-      //     date: moment('2018-11-11').format('YYYY-MM-DD'),
-      //     truck: this.trucks.gyro
-      //   },
-      //   {
-      //     date: moment('2018-11-12').format('YYYY-MM-DD'),
-      //     truck: this.trucks.cassave
-      //   },
-      //   {
-      //     date: moment('2018-11-13').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-14').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-15').format('YYYY-MM-DD'),
-      //     truck: this.trucks.chairman
-      //   },
-      //   {
-      //     date: moment('2018-11-16').format('YYYY-MM-DD'),
-      //     truck: this.trucks.bombzies
-      //   },
-      //   {
-      //     date: moment('2018-11-17').format('YYYY-MM-DD'),
-      //     truck: this.trucks.india
-      //   },
-      //   {
-      //     date: moment('2018-11-18').format('YYYY-MM-DD'),
-      //     truck: this.trucks.soco
-      //   },
-      //   {
-      //     date: moment('2018-11-19').format('YYYY-MM-DD'),
-      //     truck: this.trucks.cassave
-      //   },
-      //   {
-      //     date: moment('2018-11-20').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-21').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-22').format('YYYY-MM-DD'),
-      //     truck: this.trucks.waffle
-      //   },
-      //   {
-      //     date: moment('2018-11-23').format('YYYY-MM-DD'),
-      //     truck: this.trucks.momo
-      //   },
-      //   {
-      //     date: moment('2018-11-24').format('YYYY-MM-DD'),
-      //     truck: this.trucks.kenny
-      //   },
-      //   {
-      //     date: moment('2018-11-25').format('YYYY-MM-DD'),
-      //     truck: this.trucks.gyro
-      //   },
-      //   {
-      //     date: moment('2018-11-26').format('YYYY-MM-DD'),
-      //     truck: this.trucks.cassave
-      //   },
-      //   {
-      //     date: moment('2018-11-27').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-28').format('YYYY-MM-DD'),
-      //     truck: null
-      //   },
-      //   {
-      //     date: moment('2018-11-29').format('YYYY-MM-DD'),
-      //     truck: this.trucks.chairman
-      //   },
-      //   {
-      //     date: moment('2018-11-30').format('YYYY-MM-DD'),
-      //     truck: this.trucks.bombzies
-      //   },
-      // ],
+      Jan: [
+        {
+          date: moment('2019-01-01').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-02').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2019-01-03').format('YYYY-MM-DD'),
+          truck: this.trucks.gyro
+        },
+        {
+          date: moment('2019-01-04').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2019-01-05').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-06').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-07').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2019-01-08').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2019-01-09').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2019-01-10').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2019-01-11').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2019-01-12').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-13').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-14').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2019-01-15').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2019-01-16').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2019-01-17').format('YYYY-MM-DD'),
+          truck: this.trucks.steel
+        },
+        {
+          date: moment('2019-01-18').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2019-01-19').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-20').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-21').format('YYYY-MM-DD'),
+          truck: this.trucks.chairman
+        },
+        {
+          date: moment('2019-01-22').format('YYYY-MM-DD'),
+          truck: this.trucks.bombzies
+        },
+        {
+          date: moment('2019-01-23').format('YYYY-MM-DD'),
+          truck: this.trucks.india
+        },
+        {
+          date: moment('2019-01-24').format('YYYY-MM-DD'),
+          truck: this.trucks.soco
+        },
+        {
+          date: moment('2019-01-25').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+        {
+          date: moment('2019-01-26').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-27').format('YYYY-MM-DD'),
+          truck: null
+        },
+        {
+          date: moment('2019-01-28').format('YYYY-MM-DD'),
+          truck: this.trucks.waffle
+        },
+        {
+          date: moment('2019-01-29').format('YYYY-MM-DD'),
+          truck: this.trucks.momo
+        },
+        {
+          date: moment('2019-01-30').format('YYYY-MM-DD'),
+          truck: this.trucks.kenny
+        },
+        {
+          date: moment('2019-01-31').format('YYYY-MM-DD'),
+          truck: this.trucks.steel
+        },
+      ],
+      Feb: [
+        {
+          date: moment('2019-02-01').format('YYYY-MM-DD'),
+          truck: this.trucks.cassave
+        },
+      ],
     }
   }
 
